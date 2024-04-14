@@ -48,7 +48,7 @@ Thanks to...
 
 <div align="center">
 
-| [![Fortunatus Mokaya](https://github.com/Fortunatusmokaya.png?lenght=50width=50)](https://github.com/Fortunatusmokaya)|
+| [![Fortunatus Mokaya](https://github.com/haronrazor.png?lenght=50width=50)](https://github.com/haronrazor)|
 |----|
 * [`Fortunatus mokaya`](https://github.com/Fortunatusmokaya) ***Author, Owner***
 
@@ -60,7 +60,7 @@ Thanks to...
 
 ---
 
-Incase of any issues, contact me  [here](https://wa.me/+254114018035) via WhatsApp or [here](mokayafortunatus@gmail.com) via Email.
+Incase of any issues, contact me  [here](https://wa.me/+254728723719) via WhatsApp or [here](razorharon@gmail.com) via Email.
 
 Modifying the bot structure is at your own risk. We won't offer technical support if error occur.
 
