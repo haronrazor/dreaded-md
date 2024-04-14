@@ -48,9 +48,9 @@ Thanks to...
 
 <div align="center">
 
-| [![Fortunatus Mokaya](https://github.com/haronrazor.png?lenght=50width=50)](https://github.com/haronrazor)|
+| [![༎Illı HARON Illı༎](https://github.com/haronrazor.png?lenght=50width=50)](https://github.com/haronrazor)|
 |----|
-* [`Fortunatus mokaya`](https://github.com/Fortunatusmokaya) ***Author, Owner***
+* [`༎Illı HARON Illı༎`](https://github.com/haronrazor) ***Author, Owner***
 
 * [`DikaArdnt`](https://github.com/DikaArdnt) ***For Hisoka Base***
 * [`Adiwajshing`](https://github.com/WhiskeySockets/Baileys) ***Baileys Library***
