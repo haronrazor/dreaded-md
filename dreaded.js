@@ -439,35 +439,75 @@ return;
 }
 
 
-if (body.startsWith(prefix) && !commandNam.some(name => body.substring(prefix.length).startsWith(name))) {
+
+
+
+const trimmedBody = body.trim();
+
+if (
+    body.startsWith(prefix) &&
+    !commandNam.some(name => {
+        const userInput = trimmedBody.substring(prefix.length).toLowerCase().trim();
+
+        return userInput.includes(name.toLowerCase());
+    })
+) {
+    await sendReact("❌");
+    await m.reply(`Wrong command. Type ${prefix}menu to see the help list, eh?`);
+    return;
+}
+/* const trimmedBody = body.trim();
+
+ if (body.startsWith(prefix) && !commandNam.some(name => trimmedBody.substring(prefix.length).toLowerCase().startsWith(name))) {
     await sendReact("❌");
     await m.reply(`Wrong command, Type ${prefix}menu to see the help list eh?`);
     return;
+} */
+
+
+
+// status saver
+
+try {
+
+
+const textL = m.text.toLowerCase();
+const quotedMessage = m.msg.contextInfo.quotedMessage;
+
+  if (textL.startsWith(prefix + "save") && m.quoted.chat.includes("status@broadcast")) {
+
+if (!Owner) return m.reply("This command is used by owner to save status updates");
+
+if (!m.quoted) return m.reply("Quote a status update");
+
+
+
+      if (quotedMessage.imageMessage) {
+        let imageCaption = quotedMessage.imageMessage.caption;
+        let imageUrl = await client.downloadAndSaveMediaMessage(quotedMessage.imageMessage);
+       client.sendMessage(m.chat, { image: { url: imageUrl }, caption: imageCaption });
+
+      }
+
+
+      if (quotedMessage.videoMessage) {
+        let videoCaption = quotedMessage.videoMessage.caption;
+        let videoUrl = await client.downloadAndSaveMediaMessage(quotedMessage.videoMessage);
+       client.sendMessage(m.chat, { video: { url: videoUrl }, caption: videoCaption });
+
+      }
+    } 
+
+
+
+} catch (error) {
+  console.error("Error in occured:", error);
 }
 
 
 
-/* if (body.startsWith(prefix) && !commandNam.some(name => body.substring(prefix.length).startsWith(name))) {
-    await sendReact("❌");
-    await m.reply(`Wrong command, Type ${prefix}menu to see the help list eh?`);
-    return;
-}
 
-/if (body.startsWith(prefix)) {
-    let invalidCommand = true;
-    for (let i = 0; i < commandNam.length; i++) {
-        if (body.startsWith(commandNam[i])) {
-            invalidCommand = false;
-            break;
-        }
-    }
-    if (invalidCommand) {
-        await sendReact("❌");
-        await m.reply(`Wrong command. Type ${prefix}menu to see the help list.`);
-        return;
-    }
-}
-*/
+
 
 
 
